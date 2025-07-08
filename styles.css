@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #D4F6CC;  /* Light accent color for the body background */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -9,17 +9,50 @@ body {
 
 /* Header styling */
 header {
-    background-color: #333;
+    background-color: #0e1131;  /* Main Color for the header */
     color: white;
-    padding: 20px;
+    height: 30vh; /* Header now takes 30% of the viewport height */
+    display: flex;
+    flex-direction: column;  /* Arrange elements vertically */
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+    position: relative; /* Ensure positioning context for logos */
+    width: 100%;  /* Full width of the page */
+    margin: 0; /* Remove margin to remove distance from the top */
+    padding: 30px 0; /* Increased padding for more height */
 }
 
-header h1 {
+/* Center Text Section */
+.text-section {
+    text-align: center;
+    margin-left: 10px;  /* Adds some space between logos and text */
+    margin-right: 10px; /* Adds some space between logos and text */
+    margin-top: 5px;  /* Reduced space between logo and heading */
+}
+
+.text-section h1 {
     font-size: 2.5em;
+    margin-bottom: 5px; /* Reduced margin between title and tagline */
+    color: #EF5B0C;  /* Theme Color for the title */
 }
 
-header p {
+.text-section p {
     font-size: 1.2em;
+    margin: 5px 0;
+    color: #3CCF4E;  /* Theme Color for subtext */
+}
+
+/* Strip for "Meet the Ambassadors" */
+.meet-strip {
+    background-color: #EF5B0C;  /* Theme Color */
+    padding: 10px 15px;  /* Reduced padding for a tighter layout */
+    color: white;
+    margin-top: 10px;  /* Reduced space between text and strip */
+}
+
+.meet-strip h2 {
+    font-size: 1.5em;
+    margin: 0;
 }
 
 /* School container to hold all school blocks */
@@ -34,53 +67,134 @@ header p {
 .school-block {
     background-color: white;
     margin: 15px;
-    padding: 15px;
-    width: 280px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
+/* Hover effect for school blocks */
+.school-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #3CCF4E;  /* Theme Color on hover */
+}
+
+/* Expanded block styling */
+.school-block.expanded {
+    transform: scale(1.5);  /* Makes the block bigger */
+    z-index: 10;  /* Ensure the expanded block is on top */
+    transition: transform 0.3s ease-in-out;  /* Smooth animation */
+}
+
+/* School name styling */
 .school-block h2 {
-    color: #333;
+    color: #003865;  /* Main Color for headings */
     font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 /* Ambassador container */
 .ambassador-container {
-    display: flex; /* Change from column to row */
-    justify-content: space-between; /* Space the photos evenly */
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
+    position: relative;
 }
 
 /* Each ambassador (photo + name) styling */
 .ambassador {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     background-color: #eee;
-    border-radius: 8px;
+    border-radius: 50%; /* Circular images */
     padding: 10px;
     text-align: center;
     transition: all 0.3s ease;
-    margin-right: 10px; /* Space between the two ambassador blocks */
+    position: relative;
+    z-index: 1;
+    margin-left: -10px;
+}
+
+/* Add some space between images */
+.ambassador:nth-child(2) {
+    margin-left: 10px;
 }
 
 .ambassador img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-/* Increase size of the ambassador block on hover */
+/* Hover effect for ambassador block */
 .ambassador:hover {
-    transform: scale(1.1); /* Makes the image and name block larger */
+    transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #003865;  /* Main Color on hover */
 }
 
-/* School name styling */
-.school-name {
-    font-size: 1.2em;
+/* Name under the photo */
+.ambassador h3 {
+    margin-top: 8px;
+    font-size: 0.9em;  /* Slightly smaller font size */
     color: #333;
+    font-weight: bold;
+}
+
+/* School name under ambassador photos */
+.school-name {
+    font-size: 1.1em;
+    color: #555;
     margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design - Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Reduced padding on smaller screens */
+    }
+
+    .school-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school-block {
+        width: 90%; /* Makes each school block take up more width on mobile */
+        margin: 10px 0;
+    }
+
+    .text-section h1 {
+        font-size: 2em; /* Smaller text for smaller screens */
+    }
+
+    .text-section p {
+        font-size: 1em; /* Adjust subtitle size */
+    }
+
+    .meet-strip h2 {
+        font-size: 1.2em; /* Smaller text size for the strip */
+    }
+}
+
+@media (max-width: 480px) {
+    .school-block {
+        width: 95%; /* Makes the school blocks even bigger on very small screens */
+    }
+
+    .text-section h1 {
+        font-size: 1.8em;
+    }
+
+    .text-section p {
+        font-size: 0.9em;
+    }
 }

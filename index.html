@@ -9,14 +9,23 @@
 <body>
     <!-- Header Section -->
     <header>
-        <h1>RoboFest 2025 Ambassadors</h1>
-        <p>Meet our ambassadors from various schools!</p>
+        <!-- Center Text Section -->
+        <div class="text-section">
+            <h1>RoboFest 2025</h1>
+            <p>Sustain | Innovate | Protect</p>
+            <p>Robotics for a better tomorrow</p>
+        </div>
+
+        <!-- Strip for "Meet the Ambassadors" -->
+        <div class="meet-strip">
+            <h2>Meet the Ambassadors of RoboFest 2025</h2>
+        </div>
     </header>
-    
+
     <!-- Main Content Section -->
     <div class="school-container">
         <!-- School Block 1 -->
-        <div class="school-block">
+        <div class="school-block" onclick="toggleExpand(this)">
             <h2>Springfield High School</h2>
             <div class="ambassador-container">
                 <div class="ambassador">
@@ -28,43 +37,10 @@
                     <h3>Jane Smith</h3>
                 </div>
             </div>
-            <p class="school-name">Springfield High School</p>
         </div>
 
         <!-- School Block 2 -->
-        <div class="school-block">
-            <h2>Springfield High School</h2>
-            <div class="ambassador-container">
-                <div class="ambassador">
-                    <img src="images/teacher1.png" alt="Teacher Name">
-                    <h3>Mr. John Doe</h3>
-                </div>
-                <div class="ambassador">
-                    <img src="images/student1.png" alt="Student Name">
-                    <h3>Jane Smith</h3>
-                </div>
-            </div>
-            <p class="school-name">Springfield High School</p>
-        </div>
-
-        <!-- School Block 3 -->
-        <div class="school-block">
-            <h2>Springfield High School</h2>
-            <div class="ambassador-container">
-                <div class="ambassador">
-                    <img src="images/teacher1.png" alt="Teacher Name">
-                    <h3>Mr. John Doe</h3>
-                </div>
-                <div class="ambassador">
-                    <img src="images/student1.png" alt="Student Name">
-                    <h3>Jane Smith</h3>
-                </div>
-            </div>
-            <p class="school-name">Springfield High School</p>
-        </div>
-
-        <!-- School Block 4 -->
-        <div class="school-block">
+        <div class="school-block" onclick="toggleExpand(this)">
             <h2>Lincoln Secondary School</h2>
             <div class="ambassador-container">
                 <div class="ambassador">
@@ -76,8 +52,97 @@
                     <h3>Alan Walker</h3>
                 </div>
             </div>
-            <p class="school-name">Lincoln Secondary School</p>
+        </div>
+
+        <!-- School Block 3 -->
+        <div class="school-block" onclick="toggleExpand(this)">
+            <h2>Oak Ridge School</h2>
+            <div class="ambassador-container">
+                <div class="ambassador">
+                    <img src="images/teacher3.png" alt="Teacher Name">
+                    <h3>Mr. James Brown</h3>
+                </div>
+                <div class="ambassador">
+                    <img src="images/student3.png" alt="Student Name">
+                    <h3>Emily Davis</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Block 4 -->
+        <div class="school-block" onclick="toggleExpand(this)">
+            <h2>Green Valley Academy</h2>
+            <div class="ambassador-container">
+                <div class="ambassador">
+                    <img src="images/teacher4.png" alt="Teacher Name">
+                    <h3>Dr. Mark Wilson</h3>
+                </div>
+                <div class="ambassador">
+                    <img src="images/student4.png" alt="Student Name">
+                    <h3>John Brown</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Block 5 -->
+        <div class="school-block" onclick="toggleExpand(this)">
+            <h2>Riverdale High School</h2>
+            <div class="ambassador-container">
+                <div class="ambassador">
+                    <img src="images/teacher5.png" alt="Teacher Name">
+                    <h3>Ms. Sarah Connor</h3>
+                </div>
+                <div class="ambassador">
+                    <img src="images/student5.png" alt="Student Name">
+                    <h3>David Lee</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Block 6 -->
+        <div class="school-block" onclick="toggleExpand(this)">
+            <h2>Bright Future School</h2>
+            <div class="ambassador-container">
+                <div class="ambassador">
+                    <img src="images/teacher6.png" alt="Teacher Name">
+                    <h3>Mr. Peter Parker</h3>
+                </div>
+                <div class="ambassador">
+                    <img src="images/student6.png" alt="Student Name">
+                    <h3>Mary Jane</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Block 7 -->
+        <div class="school-block" onclick="toggleExpand(this)">
+            <h2>Sunset High School</h2>
+            <div class="ambassador-container">
+                <div class="ambassador">
+                    <img src="images/teacher7.png" alt="Teacher Name">
+                    <h3>Ms. Clara Oswald</h3>
+                </div>
+                <div class="ambassador">
+                    <img src="images/student7.png" alt="Student Name">
+                    <h3>Chris Hemsworth</h3>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleExpand(clickedBlock) {
+            // Get all school blocks
+            const allBlocks = document.querySelectorAll('.school-block');
+            
+            // Remove the expanded class from all blocks
+            allBlocks.forEach(block => {
+                block.classList.remove('expanded');
+            });
+
+            // Add the expanded class to the clicked block
+            clickedBlock.classList.add('expanded');
+        }
+    </script>
 </body>
 </html>
