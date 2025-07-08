@@ -1,0 +1,74 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* School container to hold all schools */
+.school-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+/* Styling for each school block */
+.school-block {
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.school-block h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* Styling for ambassador sections */
+.ambassador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ambassador {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ambassador img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes images circular */
+}
+
+.ambassador h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.ambassador p {
+    font-size: 0.9em;
+    color: #666;
+}
