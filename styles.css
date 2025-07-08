@@ -22,7 +22,7 @@ header p {
     font-size: 1.2em;
 }
 
-/* School container to hold all schools */
+/* School container to hold all school blocks */
 .school-container {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +30,7 @@ header p {
     margin: 20px;
 }
 
-/* Styling for each school block */
+/* School block styling */
 .school-block {
     background-color: white;
     margin: 15px;
@@ -38,6 +38,7 @@ header p {
     width: 280px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .school-block h2 {
@@ -45,30 +46,40 @@ header p {
     font-size: 1.5em;
 }
 
-/* Styling for ambassador sections */
+/* Ambassador container */
 .ambassador-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
+/* Each ambassador (photo + name) styling */
 .ambassador {
-    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 10px;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .ambassador img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Makes images circular */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.ambassador h3 {
-    margin: 10px 0 5px;
+/* Increase size of the ambassador block on hover */
+.ambassador:hover {
+    transform: scale(1.1); /* Makes the image and name block larger */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* School name styling */
+.school-name {
     font-size: 1.2em;
-}
-
-.ambassador p {
-    font-size: 0.9em;
-    color: #666;
+    color: #333;
+    margin-top: 15px;
 }
