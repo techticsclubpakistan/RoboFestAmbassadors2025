@@ -19,7 +19,7 @@ header {
     position: relative; /* Ensure positioning context for logos */
     width: 100%;  /* Full width of the page */
     margin: 0; /* Remove margin to remove distance from the top */
-    padding: 30px 0; /* Increased padding for more height */
+    padding: 0; /* Increased padding for more height */
 }
 
 /* Center Text Section */
@@ -74,20 +74,14 @@ header {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
+    overflow: hidden;  /* Hide overflowed content during the transition */
 }
 
 /* Hover effect for school blocks */
 .school-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);  /* Slightly enlarge the block on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);  /* Increase shadow on hover */
     background-color: #3CCF4E;  /* Theme Color on hover */
-}
-
-/* Expanded block styling */
-.school-block.expanded {
-    transform: scale(1.5);  /* Makes the block bigger */
-    z-index: 10;  /* Ensure the expanded block is on top */
-    transition: transform 0.3s ease-in-out;  /* Smooth animation */
 }
 
 /* School name styling */
@@ -134,7 +128,7 @@ header {
 
 /* Hover effect for ambassador block */
 .ambassador:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);  /* Slightly enlarge the ambassador on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: #003865;  /* Main Color on hover */
 }
