@@ -7,6 +7,41 @@ body {
     text-align: center;
 }
 
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #0e1131;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar stays at the top */
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list li {
+    margin: 0 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #EF5B0C;  /* Hover color */
+}
+
 /* Header styling */
 header {
     background-color: #0e1131;  /* Main Color for the header */
