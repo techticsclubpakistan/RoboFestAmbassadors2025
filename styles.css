@@ -136,10 +136,10 @@ header {
 
 /* Each ambassador (photo + name) styling */
 .ambassador {
-    width: 110px;
-    height: 110px;
+    width: 110px;  /* Make sure width and height are the same */
+    height: 110px;  /* Ensures it's square */
     background-color: #eee;
-    border-radius: 50%; /* Circular images */
+    border-radius: 5px; /* Optional: slightly round corners if you want, otherwise remove it */
     padding: 10px;
     text-align: center;
     transition: all 0.3s ease;
@@ -155,10 +155,9 @@ header {
 
 .ambassador img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    height: 100%;  /* Ensure image takes full width and height */
+    object-fit: cover;  /* Ensures the image fits the square */
+    border-radius: 5px; /* Optional: slightly round corners of the image */
 }
 
 /* Hover effect for ambassador block */
